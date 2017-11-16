@@ -13,7 +13,7 @@ class MenuController
     puts "2 - Create an entry"
     puts "3 - Search for an entry"
     puts "4 - Import entries from a CSV"
-    puts "5 - View Entry Number n"
+    puts "5 - View Entry by Number"
     puts "6 - Exit"
     puts "7 - Delete all entries"
     print "Enter your selection: "
@@ -124,6 +124,7 @@ end
 
     if (num_entered < address_book.entries.length.to_i)
         puts address_book.entries[num_entered]
+        search_submenu(address_book.entries[num_entered])
     else
         system "clear"
         puts "Please enter a valid entry number"
